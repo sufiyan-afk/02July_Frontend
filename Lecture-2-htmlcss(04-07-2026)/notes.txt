@@ -8,8 +8,6 @@ types of selector :
     5.descendent selector : 
 
 ways to apply css :
-    1.inline 
+    1. inline 
     2. external
     3. internal
-
-    

@@ -1,0 +1,34 @@
+the css display flex activates the flexbox layout model on a parent container . it automatically converts all immediate child element into flex items . giving you precise control over \
+
+
+
+core parent propertoes (the container)
+	1.Flex direction :
+		flex direction: row
+		flex direction:column
+		row revrswe column reverse
+
+	2. main axis alignments :
+		justify content :   flex-start , centre , flex-end , space between , space around 
+
+	3.cross axis alignment 
+		align items :       stretch , center , flex-start , flex-end
+	
+	4. wrapping behavior
+		flex wrap :         wrap     ,   no-wrap
+
+
+core child properties 
+ 	
+	flex-grow   ,  flex-shrink  , flex-basis    , flex   ,    align-self
+
+
+\
+Css grid layout:
+		it is a powerful , two dimentional layout system that allows you to control content in both rpos and columns simultaneously.
+
+	
+	essentaial setup : 
+			to create a grid , define the parent container structure using core properties like grid-template-columns , grid-templates-rows, gap:
+
+			align items , justify items  , place items

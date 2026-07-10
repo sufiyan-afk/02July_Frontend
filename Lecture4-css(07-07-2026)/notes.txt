@@ -1,0 +1,14 @@
+
+                        Box model
+CSS box model is the foundaitonal layout system
+where the browsers treats every single HTML element as a rectangular box.
+
+Four layers of a box:
+    1.Margin - which creates the spaces in outer part of the box .
+    2.border - the visible frame wraping around the padding and content layers. controlled via border.
+    3.padding - which creates the space in inner part of the box .
+    4.content - the innermost core holding actual text.
+
+
+                        Pseudo class and Pseudo element
+                        

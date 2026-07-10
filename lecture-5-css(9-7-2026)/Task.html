@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font awesome clone</title>
+    <style>
+
+        .page-box{
+            background-color: lightgrey;
+            padding: 40px;
+            border: 1px solid grey;
+            border-radius: 16px;
+        }
+        .stat-box{
+            background-color: white;
+            border: 1px solid lightgrey;
+            border-radius: 12px;
+            padding: 20px 24px;
+            max-width: fit-content;
+        }
+
+        .stat-box h2{
+            font-size: 32px;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .stat-box p{
+            font-size: 14px;
+            color: grey;
+            margin: 4px 0 0 ;
+        }
+
+        .stats-box{
+            background-color: gold ;
+            border: 1px solid goldenrod;
+            border-radius: 12px;
+            max-width: fit-content;
+            padding: 10px 22px;
+        }
+
+        .stats-box:hover{
+            border-color: red;
+            cursor: pointer;
+        }
+        .stats-container{
+            display: flex;
+            gap: 20px;
+        }
+
+
+        .stat-box:hover{
+            border-color: goldenrod;
+            cursor: pointer;
+        }
+        
+
+        .row-2{
+            display:flex;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .card{
+            border: 1px solid lightgrey;
+            border-radius: 16px;
+            padding: 24px;
+            width: 250px;
+            height: 220px;
+        }
+
+        .card--dark{
+            background-color: #1a2332 ;
+            color: white;
+        }
+
+        .card--light{
+            background-color: whitesmoke;
+        }
+
+        .card--blue{
+            background-color: lightskyblue;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+        }
+
+        .card:hover{
+            border-color: red;
+        }
+
+        .row-3{
+            display:flex;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .mini-card{
+            width: 180px;
+            height: 180px;
+            padding: 16px;
+            border-radius: 16px;
+            position: relative;
+        }
+
+        .mini-card--mosaic{
+            background-color: lightcoral;
+        }
+
+        .mini-card--pixel{
+            background-color: yellowgreen;
+        }
+
+        .mini-card--vellum{
+            background-color: white;
+            border: 1px solid lightgrey;
+        }
+
+        .mini-card--video{
+            background-color: #2b2b2b;
+            display: flex;
+            align-items: center;
+            justify-content: center ;
+        }
+
+        .badge{
+            background-color: gold;
+            color: black;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        .play-icon{
+            color: white;
+            font-size: 12px;
+        }
+
+        .mini-card--mosaic{
+            border-color: slateblue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-box">
+        <div class="stats-container">
+            <div class="stat-box">
+                <h2>60k+</h2>
+                <p>Icons in the Library</p>
+            </div>
+
+
+            <div class="stat-box">
+                <h2>30+</h2>
+                <p>Unique Icon Styles</p>
+            </div>
+
+            <div class="stat-box">
+                <h2>200M+</h2>
+                <p>Websites using FA</p>
+            </div>
+
+            <div class="stats-box">
+                <h2>7.3.0</h2>
+                <p>Latest Version</p>
+            </div>
+        </div>
+
+        <div class="row-2">
+            <div class="card card--dark">
+                <h3>New Animations</h3>
+                <p>Rebuilt from the ground up using classic principles of animation.Available to everyone for free</p>
+            </div>
+
+            <div class="card card--light">
+                <h3>Icon Wizard</h3>
+                <p>Add modifiers to any icons to make it your own,then drop it straight into your kit</p>
+            </div>
+
+            <div class="card card--blue">
+                <h3>Icon Upload</h3>
+                <p>Upload your own custom icons and use them anywhere in your kit,right alongside ours. </p>
+            </div>
+        </div>
+
+        <div class="row-3">
+            <div class="mini-card mini-card--mosaic">
+                <span class="badge">New</span>
+                <h4>MOSAIC</h4>
+            </div>
+
+            <div class="mini-card mini-card--pixel">
+                <span class="badge">New</span>
+                <h4>PIXEL</h4>
+            </div>
+
+            <div class="mini-card mini-card--vellum">
+                <span class="badge">NEW</span>
+                <h4>VELLUM</h4>
+            </div>
+
+            <div class="mini-card mini-card--video">
+                <span class="play-icon">click to watch</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
