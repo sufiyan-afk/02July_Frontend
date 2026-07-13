@@ -1,0 +1,31 @@
+/* Task 3: External CSS */
+
+button{
+    background-color: #e23744;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover{
+    background-color: #c81e2b;
+}
+
+/* Task 4: Selectors */
+
+.playlist-item{
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+}
+
+#currently-playing{
+    background-color: #1db954;
+    font-weight: bold;
+}
+

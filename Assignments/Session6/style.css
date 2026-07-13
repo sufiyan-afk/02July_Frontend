@@ -1,0 +1,53 @@
+/* Task 5: Reusable class reduces repeated margin and padding values */
+.common-card{
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid black;
+}
+
+/* Task 1 */
+.restaurant-card{
+    width: 250px;
+}
+
+/* Task 2 */
+.product-card{
+    width: 180px;
+}
+
+.product-name{
+    display: block;
+    margin-top: 10px;
+}
+
+.price{
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.hide-price{
+    display: none;
+}
+
+/* Task 3 */
+.whatsapp-badge{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 14px;
+    border: 1px solid black;
+}
+
+/* Task 4 */
+.movie-card{
+    position: relative;
+    width: 180px;
+}
+
+.badge{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 3px 6px;
+    border: 1px solid black;
+}
