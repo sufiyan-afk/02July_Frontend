@@ -1,0 +1,13 @@
+
+Task 1:
+        1.Open Instagram's home page in Chrome, 
+        right-click on a post image, 
+        and use Inspect Element to find the exact HTML tag and CSS class used for the image container. 
+        Write down the tag name and class.
+
+-->
+
+Tag name = img
+
+Css classes name = "xpdipgo x972fbf x10w94by x1qhh985 x14e42zd xk390pu x5yr21d xdj266r x14z9mp xat24cr x1lziwak xl1xv1r 
+xexx8yu xyri2b x18d9i69 x1c1uobl x11njtxf xh8yej3" 

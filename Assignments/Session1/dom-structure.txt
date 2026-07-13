@@ -1,0 +1,13 @@
+
+Task 4:
+        Draw a diagram or write a list showing the DOM structure (parent-child relationships) of your myprofile.html page.
+         Include at least 3 levels (html > body > your content).
+
+html
+└── body
+    ├── h1
+    │   └── Sufiyan
+    ├── p
+    │   └── Short bio text
+    └── img
+        └── Profile picture
