@@ -1,0 +1,295 @@
+📘 Session 1 Notes – Introduction to HTML & DevTools
+1. What is HTML?
+
+HTML (HyperText Markup Language) is used to create the structure of a web page.
+
+Example Tags
+<h1>Heading</h1>
+<p>Paragraph</p>
+<img src="image.jpg">
+
+
+
+2. Inspect Element
+Definition
+
+Inspect Element is a browser developer tool used to view and temporarily modify HTML and CSS.
+
+What we did?
+Opened Instagram in browser.
+Right Click → Inspect.
+Found the <img> tag and its CSS classes.
+Possible Question
+
+Q: What is the purpose of Inspect Element?
+A: It allows developers to inspect and debug HTML, CSS, and JavaScript of a webpage.
+
+3. DOM Structure
+Definition
+
+DOM (Document Object Model) represents an HTML document as a tree structure.
+
+Example
+html
+ └── body
+      ├── h1
+      ├── p
+      └── img
+Possible Question
+
+Q: What is DOM?
+A: DOM is a tree-like representation of an HTML document that allows JavaScript to access and modify elements.
+
+📘 Session 2 Notes – HTML Elements
+Topics Covered
+Headings
+Paragraphs
+Lists
+Links
+Images
+Tables
+1. Heading Tags
+<h1>Largest</h1>
+<h6>Smallest</h6>
+
+Purpose: Used for titles and headings.
+
+2. Paragraph Tag
+<p>This is a paragraph.</p>
+3. Lists
+Ordered List
+<ol>
+  <li>Tea</li>
+</ol>
+Unordered List
+<ul>
+  <li>Tea</li>
+</ul>
+4. Anchor Tag
+<a href="https://zomato.com">Visit Zomato</a>
+
+Purpose: Creates hyperlinks.
+
+5. Table
+<table>
+
+Used to display data in rows and columns.
+
+Possible Questions
+Difference between <ol> and <ul>?
+What is the use of href?
+📘 Session 3 Notes – HTML Forms
+What is a Form?
+
+A form is used to collect user input.
+
+<form method="POST">
+Important Form Elements
+Text Input
+<input type="text">
+Number Input
+<input type="number">
+Dropdown
+<select>
+Textarea
+<textarea></textarea>
+Submit Button
+<button type="submit">Submit</button>
+Attributes
+required
+<input required>
+
+Field cannot be left empty.
+
+minlength
+<input minlength="20">
+
+Minimum number of characters.
+
+disabled
+<input disabled>
+
+User cannot edit the field.
+
+GET vs POST
+GET
+Data appears in URL.
+Used for fetching data.
+POST
+Data is sent in request body.
+Used for sending sensitive or large data.
+Possible Questions
+
+Q: Why did we use POST in the assignment?
+A: Because forms generally send user-entered data to the server securely in the request body.
+
+📘 Session 4 Notes – Semantic HTML
+What is Semantic HTML?
+
+Semantic tags describe the meaning of content.
+
+Tags
+<header>
+<nav>
+<article>
+<footer>
+Benefits
+Better readability
+Better SEO
+Better accessibility
+Difference
+Non-Semantic
+<div>
+Semantic
+<header>
+Possible Question
+
+Q: Why use semantic tags?
+A: They make the webpage more meaningful for developers, browsers, and search engines.
+
+📘 Session 5 Notes – CSS Basics
+What is CSS?
+
+CSS (Cascading Style Sheets) is used to style HTML elements.
+
+1. Inline CSS
+<h1 style="color:red;">
+
+Applied directly to an element.
+
+2. Internal CSS
+<style>
+h1 { color: blue; }
+</style>
+
+Written inside the HTML file.
+
+3. External CSS
+<link rel="stylesheet" href="style.css">
+
+Styles are written in a separate .css file.
+
+4. Selectors
+Element Selector
+h1 {}
+Class Selector
+.box {}
+ID Selector
+#main {}
+5. Hover Effect
+button:hover {
+    cursor: pointer;
+}
+
+Runs when the mouse pointer is placed over an element.
+
+📘 Session 6 Notes – CSS Box Model
+Box Model Parts
+Margin
+Border
+Padding
+Content
+Padding
+
+Space inside the border.
+
+Margin
+
+Space outside the border.
+
+Border
+
+Outline around the element.
+
+Width & Height
+width: 200px;
+height: 100px;
+Border Radius
+border-radius: 10px;
+
+Creates rounded corners.
+
+Box Shadow
+box-shadow: 2px 2px 5px gray;
+
+Adds a shadow effect.
+
+Common Interview Question
+
+Q: Difference between margin and padding?
+A: Margin creates space outside the element, while padding creates space inside the element.
+
+📘 Session 7 Notes – Flexbox & Grid
+1. What is Flexbox?
+
+Flexbox is used for arranging items in a single row or column.
+
+display: flex;
+Important Properties
+justify-content
+
+Controls horizontal alignment.
+
+justify-content: space-around;
+align-items
+
+Controls vertical alignment.
+
+align-items: center;
+gap
+
+Adds space between flex items.
+
+gap: 10px;
+2. What is CSS Grid?
+
+Grid is used for arranging items in rows and columns.
+
+display: grid;
+Example
+grid-template-columns: repeat(3, 1fr);
+
+Creates 3 equal columns.
+
+Flexbox vs Grid
+Flexbox	Grid
+One-dimensional	Two-dimensional
+Row or column	Rows and columns
+Possible Question
+
+Q: When should we use Flexbox?
+A: For aligning items in a row or a column.
+
+Q: When should we use Grid?
+A: For creating layouts with rows and columns.
+
+🚀 5-Minute Revision
+Session 1
+HTML creates structure.
+Inspect Element helps debug webpages.
+DOM is a tree structure.
+Session 2
+<h1> heading
+<p> paragraph
+<a> link
+<img> image
+<table> table
+Session 3
+Forms collect user input.
+required, minlength, disabled.
+POST sends data in request body.
+Session 4
+Semantic tags: header, nav, article, footer.
+Session 5
+CSS styles webpages.
+Inline, Internal, External CSS.
+Class selector uses .
+ID selector uses #
+Session 6
+Box Model = Content + Padding + Border + Margin.
+border-radius makes corners round.
+Session 7
+Flexbox = one-dimensional layout.
+Grid = two-dimensional layout.
+justify-content aligns items horizontally.
+grid-template-columns creates columns. 

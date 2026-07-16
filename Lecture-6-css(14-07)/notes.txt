@@ -1,0 +1,11 @@
+CSS media queries : allow you to create responsive web designs by applying specific Css style based on 
+
+Standard Syntax :
+                A basic media query is initiated with the @media at-rule, followed by optional media type , a target media feature (enclosed in parenthesis),
+                and a block of CSS rules.
+
+
+                
+
+
+tablehai muje 7 row ko hi css deni hai to kese dege (Interview question)

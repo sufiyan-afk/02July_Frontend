@@ -32,3 +32,6 @@ Css grid layout:
 			to create a grid , define the parent container structure using core properties like grid-template-columns , grid-templates-rows, gap:
 
 			align items , justify items  , place items
+
+
+what is the diffrence between image tag and picture tag . 
