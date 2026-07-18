@@ -5,7 +5,4 @@ Standard Syntax :
                 and a block of CSS rules.
 
 
-                
-
-
 tablehai muje 7 row ko hi css deni hai to kese dege (Interview question)
