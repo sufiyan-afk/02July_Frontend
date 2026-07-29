@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Responsive Card</title>
+
+<style>
+
+body{
+    background:#eee;
+    font-family:Arial;
+}
+
+.card{
+    width:700px;
+    margin:40px auto;
+    display:flex;
+    border:1px solid gray;
+    background:white;
+}
+
+.card img{
+    width:250px;
+}
+
+.details{
+    padding:20px;
+}
+
+@media only screen and (max-width:600px){
+
+.card{
+    flex-direction:column;
+    width:90%;
+}
+
+.card img{
+    width:100%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<img src="https://via.placeholder.com/250">
+
+<div class="details">
+
+<h2>Smart Watch</h2>
+
+<p>$149</p>
+
+<p>Fitness tracking and heart rate monitoring.</p>
+
+</div>
+
+</div>
+
+</body>
+</html>
