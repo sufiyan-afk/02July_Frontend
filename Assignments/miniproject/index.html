@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music & Gamer Bio Links</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    padding:20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+/* Gamer Profile */
+
+.profile{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.profile-left{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.profile img{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    border:4px solid #38bdf8;
+}
+
+.profile h1{
+    font-size:32px;
+}
+
+.profile p{
+    color:#cbd5e1;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.buttons a{
+    text-decoration:none;
+    color:white;
+    padding:12px 18px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.twitch{background:#9146FF;}
+.discord{background:#5865F2;}
+.steam{background:#171A21;}
+
+.buttons a:hover{
+    transform:scale(1.05);
+}
+
+/* Form */
+
+form{
+    margin-top:35px;
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+}
+
+form h2{
+    margin-bottom:20px;
+}
+
+.input-group{
+    position:relative;
+    margin-bottom:18px;
+}
+
+.input-group i{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:20px;
+}
+
+.input-group input{
+    width:100%;
+    padding:14px 15px 14px 50px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    font-size:16px;
+}
+
+.spotify{color:#1DB954;}
+.youtube{color:#ff0000;}
+.apple{color:#ffffff;}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#38bdf8;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#0ea5e9;
+}
+
+/* Cards */
+
+.cards{
+    margin-top:35px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    padding:20px;
+    border-radius:15px;
+    color:white;
+}
+
+.card i{
+    font-size:35px;
+}
+
+.card h3{
+    margin:12px 0;
+}
+
+.card p{
+    word-break:break-word;
+}
+
+.card a{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    color:white;
+    background:black;
+}
+
+.spotify-card{
+    background:#1DB954;
+}
+
+.youtube-card{
+    background:#ff0000;
+}
+
+.apple-card{
+    background:#555;
+}
+
+@media(max-width:768px){
+
+.profile{
+    flex-direction:column;
+    text-align:center;
+}
+
+.profile-left{
+    flex-direction:column;
+}
+
+.buttons{
+    justify-content:center;
+}
+
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- Gamer Bio -->
+
+<div class="profile">
+
+<div class="profile-left">
+
+<img src="https://i.pravatar.cc/200" alt="avatar">
+
+<div>
+<h1>ShadowX</h1>
+<p>🎮 Competitive Gamer | Streamer | FPS Lover</p>
+</div>
+
+</div>
+
+<div class="buttons">
+<a href="https://twitch.tv" target="_blank" class="twitch">
+<i class="fab fa-twitch"></i> Twitch
+</a>
+
+<a href="https://discord.com" target="_blank" class="discord">
+<i class="fab fa-discord"></i> Discord
+</a>
+
+<a href="https://store.steampowered.com" target="_blank" class="steam">
+<i class="fab fa-steam"></i> Steam
+</a>
+
+</div>
+
+</div>
+
+<!-- Form -->
+
+<form id="musicLinksForm">
+
+<h2>Add Music Profile Links</h2>
+
+<div class="input-group">
+<i class="fab fa-spotify spotify"></i>
+<input type="url" id="spotify" placeholder="Spotify Profile URL">
+</div>
+
+<div class="input-group">
+<i class="fab fa-youtube youtube"></i>
+<input type="url" id="youtube" placeholder="YouTube Music URL">
+</div>
+
+<div class="input-group">
+<i class="fab fa-apple apple"></i>
+<input type="url" id="apple" placeholder="Apple Music URL">
+</div>
+
+<button type="submit">Generate Preview Cards</button>
+
+</form>
+
+<div class="cards" id="cards"></div>
+
+</div>
+
+<script>
+
+const form=document.getElementById("musicLinksForm");
+const cards=document.getElementById("cards");
+
+form.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+cards.innerHTML="";
+
+createCard(
+document.getElementById("spotify").value,
+"Spotify",
+"fab fa-spotify",
+"spotify-card"
+);
+
+createCard(
+document.getElementById("youtube").value,
+"YouTube Music",
+"fab fa-youtube",
+"youtube-card"
+);
+
+createCard(
+document.getElementById("apple").value,
+"Apple Music",
+"fab fa-apple",
+"apple-card"
+);
+
+});
+
+function createCard(url,title,icon,className){
+
+if(url.trim()=="") return;
+
+let username="Unknown";
+
+try{
+
+const path=new URL(url).pathname.split("/").filter(Boolean);
+
+username=path[path.length-1] || "User";
+
+}catch{}
+
+cards.innerHTML+=`
+<div class="card ${className}">
+<i class="${icon}"></i>
+<h3>${title}</h3>
+<p><strong>Handle:</strong> ${username}</p>
+<a href="${url}" target="_blank">Visit</a>
+</div>
+`;
+
+}
+
+</script>
+
+</body>
+</html>
