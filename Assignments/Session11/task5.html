@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theme Switcher</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div id="main" class="container mt-5 bg-light text-dark p-5 rounded">
+
+<h2>Bootstrap Theme Switcher</h2>
+
+<p>Click the button to switch between Light and Dark Mode.</p>
+
+<button class="btn btn-primary" onclick="changeTheme()">
+Switch Theme
+</button>
+
+</div>
+
+<script>
+
+function changeTheme(){
+
+let box=document.getElementById("main");
+
+box.classList.toggle("bg-light");
+box.classList.toggle("bg-dark");
+
+box.classList.toggle("text-dark");
+box.classList.toggle("text-light");
+
+}
+
+</script>
+
+</body>
+</html>
