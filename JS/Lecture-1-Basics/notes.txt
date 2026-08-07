@@ -1,0 +1,41 @@
+Falsy values :
+
+false - boolean false
+0 - number zero 
+-0  - negative zero
+0n - bigintzero
+""
+null   - intensional absence of value
+undefined
+NaN
+
+
+
+
+
+Truethly value :
+
+True
+1
+-1
+100
+"hello"
+"0"
+"false"
+[]
+{}
+function(){}
+infinity
+-100
+3.14
+
+
+
+
+Numeric conversion , unary+
+
+
+
+Function expression
+A function expression is created when the execution reaches it and is usable only from that moment.
+

@@ -1,0 +1,9 @@
+Grid break points 
+
+Extra small (xs)
+small(sm)
+medium(md)
+large(lg)
+extra large(xl)
+extra extra large(xxl)
+

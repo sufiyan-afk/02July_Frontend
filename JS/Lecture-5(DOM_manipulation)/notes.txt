@@ -1,0 +1,26 @@
+DOM (Document Object Model) manipulation allows you to use 
+JavaScript to dynamically change a webpage's content , structure , and styles. 
+
+the browser translates HTML document into a tree structure of objects that Javascript can easily read
+and alter.
+
+
+
+
+1. Selecting Elements -
+Before modifying an element , you must locate it in the document .
+
+document.querySelector(): finds first element matching a CSS selector.
+document.querySelectorAll();
+
+
+
+
+
+2. Modifying content and Text
+updating the contents inside an html tag is achieved via specific core properties.
+
+textcontent : Gets or sets the plain text inside an element , safely parsing any raw HTML text without executing it.
+
+innerHTML : Gets or sets the raw HTML layout inside an element . warning :
+                             Do not use this with untrusted user inputs to prevent Cross-Site Scripting (XSS) risks.
