@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 10</title>
+</head>
+<body>
+
+<script>
+    function createPlaylistButton(songName, themeColor) {
+        let button = document.createElement("button");
+
+        button.innerText = songName;
+        button.style.backgroundColor = themeColor;
+        button.style.color = "white";
+        button.style.padding = "10px 20px";
+        button.style.margin = "5px";
+        button.style.border = "none";
+        button.style.borderRadius = "5px";
+
+        return button;
+    }
+
+    let button1 = createPlaylistButton("Perfect", "green");
+    let button2 = createPlaylistButton("Believer", "blue");
+    let button3 = createPlaylistButton("Shape of You", "purple");
+
+    document.body.appendChild(button1);
+    document.body.appendChild(button2);
+    document.body.appendChild(button3);
+</script>
+
+</body>
+</html>

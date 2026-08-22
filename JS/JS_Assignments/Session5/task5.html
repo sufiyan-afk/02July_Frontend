@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 5</title>
+</head>
+<body>
+
+<script>
+    const formatFollowers = (count) => {
+        if (count >= 1000) {
+            return (count / 1000).toFixed(1) + "K";
+        }
+
+        return count;
+    };
+
+    console.log(formatFollowers(1500));
+    console.log(formatFollowers(500));
+</script>
+
+</body>
+</html>

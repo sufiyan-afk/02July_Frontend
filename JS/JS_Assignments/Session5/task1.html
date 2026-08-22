@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1</title>
+</head>
+<body>
+
+<script>
+    function createSpotifyButton(label, color) {
+        let button = document.createElement("button");
+
+        button.innerText = label;
+        button.style.backgroundColor = color;
+        button.style.color = "white";
+        button.style.padding = "10px 20px";
+        button.style.border = "none";
+        button.style.borderRadius = "5px";
+
+        return button;
+    }
+
+    let spotifyButton = createSpotifyButton("Play Spotify", "green");
+
+    document.body.appendChild(spotifyButton);
+</script>
+
+</body>
+</html>
