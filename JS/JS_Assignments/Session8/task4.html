@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 4</title>
+</head>
+<body>
+
+<script>
+    let playlists = [
+        {
+            name: "Workout Hits",
+            creator: "Sufiyan",
+            numberOfSongs: 20
+        },
+        {
+            name: "Chill Vibes",
+            creator: "Rahul",
+            numberOfSongs: 15
+        },
+        {
+            name: "Bollywood Hits",
+            creator: "Aisha",
+            numberOfSongs: 30
+        }
+    ];
+
+    playlists.push({
+        name: "My Favorite Songs",
+        creator: "Sufiyan",
+        numberOfSongs: 25,
+        genre: "Pop"
+    });
+
+    console.log("After push:", playlists);
+
+    let removedPlaylist = playlists.pop();
+
+    console.log("After pop:", playlists);
+    console.log("Removed:", removedPlaylist);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 7</title>
+</head>
+<body>
+
+<script>
+    let playlists = [
+        {
+            name: "Workout Hits",
+            creator: "Sufiyan",
+            numberOfSongs: 20
+        },
+        {
+            name: "Chill Vibes",
+            creator: "Rahul",
+            numberOfSongs: 15
+        },
+        {
+            name: "Bollywood Hits",
+            creator: "Aisha",
+            numberOfSongs: 30
+        }
+    ];
+
+    playlists.splice(1, 1, {
+        name: "Travel Vibes",
+        creator: "Sufiyan",
+        numberOfSongs: 22
+    });
+
+    console.log(playlists);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 10</title>
+</head>
+<body>
+
+<script>
+    let favApps = [
+        {
+            title: "Instagram",
+            url: "https://instagram.com"
+        },
+        {
+            title: "WhatsApp",
+            url: "https://whatsapp.com"
+        },
+        {
+            title: "YouTube",
+            url: "https://youtube.com"
+        },
+        {
+            title: "Zomato",
+            url: "https://zomato.com"
+        },
+        {
+            title: "Spotify",
+            url: "https://spotify.com"
+        }
+    ];
+
+    favApps.splice(2, 1, {
+        title: "ChatGPT",
+        url: "https://chatgpt.com"
+    });
+
+    console.log(favApps);
+</script>
+
+</body>
+</html>

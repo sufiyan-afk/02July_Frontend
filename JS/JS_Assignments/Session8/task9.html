@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 9</title>
+</head>
+<body>
+
+<script>
+    let orders = [
+        {
+            orderId: 101,
+            items: [
+                { itemName: "Pizza", price: 299 },
+                { itemName: "Burger", price: 199 }
+            ],
+            delivery: {
+                address: "Surat",
+                status: "Delivered"
+            }
+        },
+        {
+            orderId: 102,
+            items: [
+                { itemName: "Biryani", price: 249 },
+                { itemName: "Coke", price: 60 }
+            ],
+            delivery: {
+                address: "Mumbai",
+                status: "Preparing"
+            }
+        }
+    ];
+
+    for (let order of orders) {
+        let totalPrice = 0;
+
+        for (let item of order.items) {
+            totalPrice += item.price;
+        }
+
+        console.log(
+            "Order ID: " + order.orderId +
+            " | Total Price: ₹" + totalPrice
+        );
+    }
+</script>
+
+</body>
+</html>
