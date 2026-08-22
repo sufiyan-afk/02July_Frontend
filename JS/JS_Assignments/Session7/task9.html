@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 9</title>
+</head>
+<body>
+
+<button id="cartButton">Add to Cart</button>
+
+<script>
+    document.getElementById("cartButton").addEventListener("click", function(event) {
+        console.log("Event Type:", event.type);
+        console.log("X:", event.clientX);
+        console.log("Y:", event.clientY);
+    });
+
+    document.getElementById("cartButton").addEventListener("mouseover", function(event) {
+        console.log("Event Type:", event.type);
+        console.log("X:", event.clientX);
+        console.log("Y:", event.clientY);
+    });
+</script>
+
+</body>
+</html>

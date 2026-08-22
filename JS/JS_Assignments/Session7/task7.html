@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 7</title>
+</head>
+<body>
+
+<div class="movie">
+    <span>Avengers</span>
+    <button class="remove">Remove</button>
+</div>
+
+<div class="movie">
+    <span>Inception</span>
+    <button class="remove">Remove</button>
+</div>
+
+<div class="movie">
+    <span>Interstellar</span>
+    <button class="remove">Remove</button>
+</div>
+
+<script>
+    let buttons = document.querySelectorAll(".remove");
+
+    buttons.forEach(function(button) {
+        button.addEventListener("click", function() {
+            this.parentElement.remove();
+        });
+    });
+</script>
+
+</body>
+</html>

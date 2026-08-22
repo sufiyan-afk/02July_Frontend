@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 4</title>
+</head>
+<body>
+
+<select id="cuisine">
+    <option value="">Select Cuisine</option>
+    <option value="Indian">Indian</option>
+    <option value="Chinese">Chinese</option>
+    <option value="Italian">Italian</option>
+</select>
+
+<input type="number" placeholder="Quantity">
+
+<p id="message"></p>
+
+<script>
+    document.getElementById("cuisine").onchange = function() {
+        document.getElementById("message").innerHTML =
+            "You selected: " + this.value;
+    };
+</script>
+
+</body>
+</html>

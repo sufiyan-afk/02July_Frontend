@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 2</title>
+</head>
+<body>
+
+<button onclick="addSong()">Add Song</button>
+
+<script>
+    function addSong() {
+        let songs = ["Perfect", "Believer", "Kesariya", "Tum Hi Ho"];
+        let randomSong = songs[Math.floor(Math.random() * songs.length)];
+
+        let card = document.createElement("div");
+        card.innerHTML = `<h3>${randomSong}</h3>`;
+
+        document.body.appendChild(card);
+    }
+</script>
+
+</body>
+</html>

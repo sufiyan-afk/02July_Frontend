@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 5</title>
+</head>
+<body>
+
+<button id="likeButton">Like  0</button>
+
+<script>
+    let likeCount = 0;
+
+    document.getElementById("likeButton").addEventListener("click", function() {
+        likeCount++;
+        this.innerHTML = "Like  " + likeCount;
+    });
+</script>
+
+</body>
+</html>
