@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let favFood = "pizza";
+        let favFoodCopy = favFood;
+
+        favFood = "burger";
+
+        console.log(favFood);
+        console.log(favFoodCopy);
+
+
+        // Object example
+        let zomatoUser = {
+            city: "Surat"
+        };
+
+        let zomatoUserCopy = zomatoUser;
+
+        zomatoUser.city = "Mumbai";
+
+        console.log(zomatoUser);
+        console.log(zomatoUserCopy);
+
+        // Primitive values are copied independently.
+        // Objects are reference types, so both variables point to the same object.
+    </script>
+</body>
+</html>
