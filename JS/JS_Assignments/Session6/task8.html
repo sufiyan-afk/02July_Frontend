@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 8</title>
+</head>
+<body>
+
+<span id="song-title">Perfect</span>
+
+<button id="changeSong">Change Song</button>
+
+<script>
+    let songs = ["Believer", "Kesariya", "Shape of You", "Tum Hi Ho"];
+
+    let index = 0;
+
+    document.getElementById("changeSong").addEventListener("click", function() {
+        document.getElementById("song-title").innerHTML = songs[index];
+
+        index++;
+
+        if (index >= songs.length) {
+            index = 0;
+        }
+    });
+</script>
+
+</body>
+</html>
