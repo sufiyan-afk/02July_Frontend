@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Live Order Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 50px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #error {
+            color: red;
+        }
+
+        li {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Live Order Form</h1>
+
+    <form id="orderForm">
+
+        <input
+            type="text"
+            id="dishName"
+            placeholder="Enter dish name"
+        >
+
+        <br>
+
+        <input
+            type="number"
+            id="quantity"
+            placeholder="Enter quantity"
+        >
+
+        <br>
+
+        <button type="submit">
+            Add to Cart
+        </button>
+
+        <p id="error"></p>
+
+    </form>
+
+    <h2>Cart</h2>
+
+    <ul id="cartList"></ul>
+
+
+    <script>
+
+        const form = document.getElementById("orderForm");
+
+        const dishName =
+            document.getElementById("dishName");
+
+        const quantity =
+            document.getElementById("quantity");
+
+        const error =
+            document.getElementById("error");
+
+        const cartList =
+            document.getElementById("cartList");
+
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const name = dishName.value.trim();
+            const qty = quantity.value.trim();
+
+
+            // Validation
+            if (name === "" || qty === "") {
+
+                error.textContent =
+                    "Please enter dish name and quantity.";
+
+                return;
+            }
+
+
+            if (Number(qty) <= 0) {
+
+                error.textContent =
+                    "Quantity must be greater than 0.";
+
+                return;
+            }
+
+
+            error.textContent = "";
+
+
+            // Create new list item
+            const li = document.createElement("li");
+
+            li.textContent =
+                `${name} - Quantity: ${qty}`;
+
+
+            cartList.appendChild(li);
+
+
+            // Clear inputs
+            dishName.value = "";
+            quantity.value = "";
+
+        });
+
+    </script>
+
+</body>
+</html>

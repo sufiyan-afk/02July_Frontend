@@ -1,0 +1,4 @@
+The AI-generated code did not check response.ok, so HTTP errors
+were not handled properly. I added response.ok validation and
+error handling. I also added automatic favourite highlighting
+after page reload and a remove-favourite option for better testing.

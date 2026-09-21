@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>AI Corrected Code</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            margin: 40px;
+        }
+
+        li {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .favorite {
+            font-weight: bold;
+            background: lightgreen;
+        }
+
+        #error {
+            color: red;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <h1>Food Items</h1>
+
+    <p id="loading">
+        Loading...
+    </p>
+
+    <p id="error"></p>
+
+    <ul id="foodList"></ul>
+
+
+<script>
+
+const API_URL =
+    "https://jsonplaceholder.typicode.com/posts";
+
+
+const STORAGE_KEY =
+    "favourites";
+
+
+async function loadFoods() {
+
+    const loading =
+        document.getElementById("loading");
+
+    const error =
+        document.getElementById("error");
+
+    const foodList =
+        document.getElementById("foodList");
+
+
+    try {
+
+        loading.textContent =
+            "Loading food items...";
+
+
+        const response =
+            await fetch(API_URL);
+
+
+        // FIX:
+        // Check HTTP response status
+
+        if (!response.ok) {
+
+            throw new Error(
+                `HTTP Error: ${response.status}`
+            );
+
+        }
+
+
+        const posts =
+            await response.json();
+
+
+        const favourites =
+            JSON.parse(
+                localStorage.getItem(
+                    STORAGE_KEY
+                )
+            ) || [];
+
+
+        loading.textContent = "";
+
+
+        foodList.innerHTML = "";
+
+
+        posts.forEach(post => {
+
+            const li =
+                document.createElement("li");
+
+
+            li.textContent =
+                post.title;
+
+
+            // FIX:
+            // Highlight saved favourites
+            // automatically after reload
+
+            if (
+                favourites.includes(
+                    post.title
+                )
+            ) {
+
+                li.classList.add(
+                    "favorite"
+                );
+
+            }
+
+
+            const button =
+                document.createElement("button");
+
+
+            button.textContent =
+                favourites.includes(
+                    post.title
+                )
+                ? "Remove from Favourites"
+                : "Add to Favourites";
+
+
+            button.addEventListener(
+                "click",
+                function() {
+
+                    let currentFavourites =
+                        JSON.parse(
+                            localStorage.getItem(
+                                STORAGE_KEY
+                            )
+                        ) || [];
+
+
+                    if (
+                        currentFavourites.includes(
+                            post.title
+                        )
+                    ) {
+
+                        currentFavourites =
+                            currentFavourites.filter(
+                                item =>
+                                    item !==
+                                    post.title
+                            );
+
+
+                        li.classList.remove(
+                            "favorite"
+                        );
+
+
+                        button.textContent =
+                            "Add to Favourites";
+
+                    }
+
+                    else {
+
+                        currentFavourites.push(
+                            post.title
+                        );
+
+
+                        li.classList.add(
+                            "favorite"
+                        );
+
+
+                        button.textContent =
+                            "Remove from Favourites";
+
+                    }
+
+
+                    localStorage.setItem(
+                        STORAGE_KEY,
+                        JSON.stringify(
+                            currentFavourites
+                        )
+                    );
+
+                }
+            );
+
+
+            li.appendChild(button);
+
+            foodList.appendChild(li);
+
+        });
+
+
+    }
+
+    catch (err) {
+
+        loading.textContent = "";
+
+        error.textContent =
+            "Unable to load food items.";
+
+        console.error(err);
+
+    }
+
+}
+
+
+loadFoods();
+
+</script>
+
+</body>
+
+</html>
