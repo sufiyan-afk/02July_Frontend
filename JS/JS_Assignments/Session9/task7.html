@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 7</title>
+</head>
+<body>
+
+<ul id="restaurantList"></ul>
+
+<button id="clearFavorites">Clear Favorites</button>
+
+<script>
+    let restaurants = JSON.parse(localStorage.getItem("restaurants")) || [];
+
+    function displayRestaurants() {
+        let list = document.getElementById("restaurantList");
+
+        list.innerHTML = "";
+
+        restaurants.forEach(function(restaurant) {
+            let li = document.createElement("li");
+            li.innerHTML = restaurant;
+            list.appendChild(li);
+        });
+    }
+
+    document.getElementById("clearFavorites").addEventListener("click", function() {
+        localStorage.removeItem("restaurants");
+
+        restaurants = [];
+
+        displayRestaurants();
+    });
+
+    displayRestaurants();
+</script>
+
+</body>
+</html>

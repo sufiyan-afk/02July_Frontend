@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 5</title>
+</head>
+<body>
+
+<input type="text" id="restaurantInput" placeholder="Restaurant name">
+<button id="addRestaurant">Add Restaurant</button>
+
+<ul id="restaurantList"></ul>
+
+<script>
+    let restaurants = JSON.parse(localStorage.getItem("restaurants")) || [];
+
+    function displayRestaurants() {
+        let list = document.getElementById("restaurantList");
+        list.innerHTML = "";
+
+        restaurants.forEach(function(restaurant) {
+            let li = document.createElement("li");
+            li.innerHTML = restaurant;
+            list.appendChild(li);
+        });
+    }
+
+    document.getElementById("addRestaurant").addEventListener("click", function() {
+        let restaurant = document.getElementById("restaurantInput").value;
+
+        if (restaurant !== "" && restaurants.length < 3) {
+            restaurants.push(restaurant);
+
+            localStorage.setItem(
+                "restaurants",
+                JSON.stringify(restaurants)
+            );
+
+            document.getElementById("restaurantInput").value = "";
+
+            displayRestaurants();
+        }
+    });
+
+    displayRestaurants();
+</script>
+
+</body>
+</html>

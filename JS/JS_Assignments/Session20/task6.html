@@ -1,0 +1,39 @@
+function Task6() {
+    const bugs = [
+        {
+            bug: "Double Add",
+            fix: "Check if the item already exists before adding."
+        },
+        {
+            bug: "Empty Form Field",
+            fix: "Validate input using trim() before submission."
+        },
+        {
+            bug: "Cart Count Not Updating",
+            fix: "Update React state using setState."
+        },
+        {
+            bug: "Button Does Nothing",
+            fix: "Check that the correct onClick handler is attached."
+        },
+        {
+            bug: "UI Not Updating",
+            fix: "Create a new state array instead of directly modifying state."
+        }
+    ];
+
+    return (
+        <div>
+            <h2>React App Bug Checklist</h2>
+
+            {bugs.map((item, index) => (
+                <div key={index}>
+                    <h3>{index + 1}. {item.bug}</h3>
+                    <p>Fix: {item.fix}</p>
+                </div>
+            ))}
+        </div>
+    );
+}
+
+export default Task6;

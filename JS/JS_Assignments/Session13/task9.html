@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 9</title>
+</head>
+<body>
+
+<script>
+function testError() {
+    throw new Error("Something went wrong");
+}
+
+try {
+    testError();
+} catch (error) {
+    console.log(error.stack);
+
+    /*
+    The stack trace shows the error message and the sequence
+    of function calls that led to the error. It also shows the
+    file and line number where the error occurred.
+    */
+}
+</script>
+
+</body>
+</html>

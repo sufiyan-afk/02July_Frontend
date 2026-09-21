@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 2</title>
+</head>
+<body>
+
+<ul id="songList">
+    <li>Perfect <button class="remove-btn">Remove</button></li>
+    <li>Believer <button class="remove-btn">Remove</button></li>
+    <li>Faded <button class="remove-btn">Remove</button></li>
+</ul>
+
+<script>
+const songList = document.getElementById("songList");
+
+songList.addEventListener("click", function(event) {
+    if (event.target.classList.contains("remove-btn")) {
+        event.target.parentElement.remove();
+    }
+});
+</script>
+
+</body>
+</html>

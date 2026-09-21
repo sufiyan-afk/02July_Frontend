@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 7</title>
+
+    <style>
+        .notification {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid gray;
+            transition: opacity 0.5s;
+        }
+
+        .fade {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+
+<button id="addNotification">Add Notification</button>
+
+<div id="notifications">
+    <div class="notification">
+        New video uploaded!
+        <button class="dismiss-btn">Dismiss</button>
+    </div>
+
+    <div class="notification">
+        Someone liked your video!
+        <button class="dismiss-btn">Dismiss</button>
+    </div>
+</div>
+
+<script>
+const notifications = document.getElementById("notifications");
+const addNotification = document.getElementById("addNotification");
+
+notifications.addEventListener("click", function(event) {
+    if (event.target.classList.contains("dismiss-btn")) {
+        const card = event.target.closest(".notification");
+
+        card.classList.add("fade");
+
+        setTimeout(() => {
+            card.remove();
+        }, 500);
+    }
+});
+
+addNotification.addEventListener("click", function() {
+    const card = document.createElement("div");
+
+    card.className = "notification";
+
+    card.innerHTML = `
+        New YouTube notification!
+        <button class="dismiss-btn">Dismiss</button>
+    `;
+
+    notifications.appendChild(card);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+import { useState } from "react";
+
+function Task3() {
+    const [name, setName] = useState("");
+    const [description, setDescription] = useState("");
+    const [errors, setErrors] = useState({});
+
+    function handleSubmit(event) {
+        event.preventDefault();
+
+        const newErrors = {};
+
+        if (!name.trim()) {
+            newErrors.name = "Playlist name is required";
+        }
+
+        if (!description.trim()) {
+            newErrors.description = "Description is required";
+        }
+
+        setErrors(newErrors);
+
+        if (Object.keys(newErrors).length === 0) {
+            alert("Playlist created successfully!");
+        }
+    }
+
+    return (
+        <div>
+            <h2>Create Playlist</h2>
+
+            <form onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    placeholder="Playlist name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                />
+
+                {errors.name && <p>{errors.name}</p>}
+
+                <br />
+
+                <textarea
+                    placeholder="Playlist description"
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                />
+
+                {errors.description && (
+                    <p>{errors.description}</p>
+                )}
+
+                <br />
+
+                <button type="submit">
+                    Create Playlist
+                </button>
+            </form>
+        </div>
+    );
+}
+
+export default Task3;

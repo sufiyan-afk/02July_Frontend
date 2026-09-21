@@ -1,0 +1,56 @@
+import { useState } from "react";
+
+function Task1() {
+    const [cart, setCart] = useState([]);
+
+    const product = {
+        id: 1,
+        name: "T-Shirt",
+        price: 499
+    };
+
+    function addToCart() {
+        setCart((currentCart) => {
+            const alreadyAdded = currentCart.some(
+                item => item.id === product.id
+            );
+
+            if (alreadyAdded) {
+                alert("Product is already in cart!");
+                return currentCart;
+            }
+
+            return [...currentCart, product];
+        });
+    }
+
+    return (
+        <div>
+            <h2>Flipkart Add to Cart</h2>
+
+            <p>{product.name} - ₹{product.price}</p>
+
+            <button onClick={addToCart}>
+                Add to Cart
+            </button>
+
+            <h3>Cart Count: {cart.length}</h3>
+
+            {cart.map(item => (
+                <p key={item.id}>
+                    {item.name} - ₹{item.price}
+                </p>
+            ))}
+
+            <hr />
+
+            <h3>Bug Found & Fix</h3>
+            <p>
+                Bug: Multiple clicks could add the same product multiple times.
+                Fix: Check the product ID before adding it to the cart.
+            </p>
+        </div>
+    );
+}
+
+export default Task1;

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 2</title>
+</head>
+<body>
+
+<script>
+const playlists = [
+    { name: "Chill Vibes", isPublic: true },
+    { name: "Private Songs", isPublic: false },
+    { name: "Workout", isPublic: true }
+];
+
+const publicPlaylists = playlists.filter(
+    playlist => playlist.isPublic
+);
+
+console.log(publicPlaylists);
+</script>
+
+</body>
+</html>

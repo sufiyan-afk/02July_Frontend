@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 9</title>
+</head>
+<body>
+
+<script>
+const transactions = [
+    { amount: 500 },
+    { amount: 1200 },
+    { amount: 800 },
+    { amount: 300 }
+];
+
+// map() gets all amounts, reduce() calculates their sum.
+const totalSpent = transactions
+    .map(transaction => transaction.amount)
+    .reduce((total, amount) => total + amount, 0);
+
+console.log("Total Amount Spent:", totalSpent);
+</script>
+
+</body>
+</html>

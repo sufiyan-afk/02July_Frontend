@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 7 - Data Flow Diagram</title>
+</head>
+<body>
+
+<h2>Playlist Data Flow</h2>
+
+<pre>
+              +----------------+
+              |     Form       |
+              | Name + Details |
+              +-------+--------+
+                      |
+                      | Form Submit
+                      v
+              +----------------+
+              | JavaScript     |
+              | Array          |
+              +-------+--------+
+                      |
+              Add / Edit / Delete
+                      |
+                      v
+              +----------------+
+              |  Display List  |
+              |      UI        |
+              +----------------+
+                      |
+                      | User Action
+                      v
+              +----------------+
+              | Update Array   |
+              +-------+--------+
+                      |
+                      v
+              +----------------+
+              | Re-render UI   |
+              +----------------+
+</pre>
+
+</body>
+</html>

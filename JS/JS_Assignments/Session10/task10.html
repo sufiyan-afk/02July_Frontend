@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 10</title>
+</head>
+<body>
+
+<script>
+const getFollowersSummary = (...followers) => {
+    let total = 0;
+
+    for (let count of followers) {
+        total += count;
+    }
+
+    return `Total followers: ${total}`;
+};
+
+console.log(getFollowersSummary(400, 300, 500));
+</script>
+
+</body>
+</html>

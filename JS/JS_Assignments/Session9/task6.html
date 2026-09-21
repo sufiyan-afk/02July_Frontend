@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 6</title>
+</head>
+<body>
+
+<script>
+    function getRecentSearches() {
+        let saved = localStorage.getItem("recentSearches");
+
+        if (saved === null) {
+            return [];
+        }
+
+        return JSON.parse(saved);
+    }
+
+    console.log(getRecentSearches());
+</script>
+
+</body>
+</html>

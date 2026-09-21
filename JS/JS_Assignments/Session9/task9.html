@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 9</title>
+</head>
+<body>
+
+<script>
+    let movies = ["Jawan", "Pathaan", "Dunki"];
+
+    // localStorage stores data as strings,
+    // so convert the array to JSON before saving.
+    localStorage.setItem("movies", JSON.stringify(movies));
+
+    let saved = localStorage.getItem("movies");
+
+    let arr = JSON.parse(saved);
+
+    console.log(arr);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1 - Create Playlist</title>
+</head>
+<body>
+
+<h2>Create Playlist</h2>
+
+<form id="playlistForm">
+    <input type="text" id="name" placeholder="Playlist Name" required>
+    <br><br>
+
+    <textarea id="description" placeholder="Playlist Description" required></textarea>
+    <br><br>
+
+    <button type="submit">Create Playlist</button>
+</form>
+
+<script>
+const playlists = [];
+
+document.getElementById("playlistForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const description = document.getElementById("description").value;
+
+    const playlist = {
+        name: name,
+        description: description
+    };
+
+    playlists.push(playlist);
+
+    console.log(playlists);
+
+    this.reset();
+});
+</script>
+
+</body>
+</html>

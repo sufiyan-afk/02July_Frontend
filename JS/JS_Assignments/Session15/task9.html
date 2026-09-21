@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 9</title>
+</head>
+<body>
+
+<script>
+class Playlist {
+    constructor(name, songs) {
+        this.name = name;
+        this.songs = songs;
+    }
+
+    displayPlaylist() {
+        console.log(`Playlist: ${this.name}`);
+        console.log(`Songs: ${this.songs.join(", ")}`);
+    }
+
+    getSongCount() {
+        return this.songs.length;
+    }
+
+    addSong(songName) {
+        this.songs.push(songName);
+    }
+}
+
+const playlist = new Playlist("Chill Vibes", [
+    "Perfect",
+    "Night Changes",
+    "Until I Found You"
+]);
+
+playlist.displayPlaylist();
+console.log("Song Count:", playlist.getSongCount());
+</script>
+
+</body>
+</html>

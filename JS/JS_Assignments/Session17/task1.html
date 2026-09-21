@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1</title>
+</head>
+<body>
+
+<div id="songList"></div>
+
+<script>
+const songList = document.getElementById("songList");
+
+const songs = [
+    "Perfect",
+    "Until I Found You",
+    "Night Changes"
+];
+
+songs.forEach(song => {
+    const card = document.createElement("div");
+
+    card.className = "song-card";
+    card.innerHTML = `
+        <span>${song}</span>
+        <button class="remove-btn">X</button>
+    `;
+
+    songList.appendChild(card);
+});
+
+songList.addEventListener("click", function(event) {
+    if (event.target.classList.contains("remove-btn")) {
+        event.target.parentElement.remove();
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 5 - Playlist Edit Delete</title>
+</head>
+<body>
+
+<h2>Playlist Manager</h2>
+
+<form id="playlistForm">
+    <input type="text" id="name" placeholder="Playlist Name" required>
+    <br><br>
+
+    <textarea id="description" placeholder="Description" required></textarea>
+    <br><br>
+
+    <button type="submit">Add Playlist</button>
+</form>
+
+<h3>Playlists</h3>
+<div id="playlistList"></div>
+
+<script>
+const playlists = [];
+
+const form = document.getElementById("playlistForm");
+const playlistList = document.getElementById("playlistList");
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const playlist = {
+        name: document.getElementById("name").value,
+        description: document.getElementById("description").value
+    };
+
+    playlists.push(playlist);
+
+    displayPlaylists();
+    form.reset();
+});
+
+function displayPlaylists() {
+    playlistList.innerHTML = "";
+
+    playlists.forEach(function(playlist, index) {
+        const div = document.createElement("div");
+
+        div.innerHTML = `
+            <h4>${playlist.name}</h4>
+            <p>${playlist.description}</p>
+            <button onclick="editPlaylist(${index})">Edit</button>
+            <button onclick="deletePlaylist(${index})">Delete</button>
+            <hr>
+        `;
+
+        playlistList.appendChild(div);
+    });
+}
+
+function editPlaylist(index) {
+    const newName = prompt("Enter new playlist name:", playlists[index].name);
+    const newDescription = prompt(
+        "Enter new description:",
+        playlists[index].description
+    );
+
+    if (newName !== null && newDescription !== null) {
+        playlists[index].name = newName;
+        playlists[index].description = newDescription;
+
+        displayPlaylists();
+    }
+}
+
+function deletePlaylist(index) {
+    playlists.splice(index, 1);
+    displayPlaylists();
+}
+</script>
+
+</body>
+</html>

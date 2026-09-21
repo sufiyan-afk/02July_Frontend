@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 7</title>
+</head>
+<body>
+
+<script>
+class Playlist {
+    constructor(name, songs) {
+        this.name = name;
+        this.songs = songs;
+    }
+
+    addSong(songName) {
+        this.songs.push(songName);
+    }
+
+    displayPlaylist() {
+        console.log(`Playlist: ${this.name}`);
+        console.log(`Songs: ${this.songs.join(", ")}`);
+    }
+}
+
+const playlist = new Playlist("Chill Vibes", [
+    "Perfect",
+    "Night Changes"
+]);
+
+playlist.addSong("Until I Found You");
+playlist.addSong("Let Me Down Slowly");
+
+playlist.displayPlaylist();
+</script>
+
+</body>
+</html>

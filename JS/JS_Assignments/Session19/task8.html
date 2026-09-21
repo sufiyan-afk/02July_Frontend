@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 8 - Delete Restaurant</title>
+</head>
+<body>
+
+<h2>Restaurant Manager</h2>
+
+<form id="restaurantForm">
+    <input type="text" id="name" placeholder="Restaurant Name" required>
+    <input type="text" id="cuisine" placeholder="Cuisine" required>
+    <input type="number" id="rating" placeholder="Rating" min="0" max="5" required>
+
+    <button type="submit">Add Restaurant</button>
+</form>
+
+<h3>Restaurants</h3>
+<div id="restaurantList"></div>
+
+<script>
+const restaurants = [];
+
+const form = document.getElementById("restaurantForm");
+const restaurantList = document.getElementById("restaurantList");
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    restaurants.push({
+        name: document.getElementById("name").value,
+        cuisine: document.getElementById("cuisine").value,
+        rating: document.getElementById("rating").value
+    });
+
+    displayRestaurants();
+    form.reset();
+});
+
+function displayRestaurants() {
+    restaurantList.innerHTML = "";
+
+    restaurants.forEach(function(restaurant, index) {
+        const div = document.createElement("div");
+
+        div.innerHTML = `
+            <strong>${restaurant.name}</strong><br>
+            Cuisine: ${restaurant.cuisine}<br>
+            Rating: ${restaurant.rating}<br>
+            <button onclick="deleteRestaurant(${index})">Delete</button>
+            <hr>
+        `;
+
+        restaurantList.appendChild(div);
+    });
+}
+
+function deleteRestaurant(index) {
+    restaurants.splice(index, 1);
+    displayRestaurants();
+}
+</script>
+
+</body>
+</html>

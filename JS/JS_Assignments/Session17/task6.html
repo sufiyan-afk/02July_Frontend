@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 6</title>
+</head>
+<body>
+
+<button id="addProduct">Add Random Product</button>
+
+<div id="cart">
+    <div class="cart-card">
+        <span>iPhone 15 - ₹70000</span>
+        <button class="remove-btn">X</button>
+    </div>
+</div>
+
+<script>
+const cart = document.getElementById("cart");
+const addProduct = document.getElementById("addProduct");
+
+cart.addEventListener("click", function(event) {
+    if (event.target.classList.contains("remove-btn")) {
+        event.target.closest(".cart-card").remove();
+    }
+});
+
+addProduct.addEventListener("click", function() {
+    const card = document.createElement("div");
+
+    card.className = "cart-card";
+
+    card.innerHTML = `
+        <span>Random Product - ₹1499</span>
+        <button class="remove-btn">X</button>
+    `;
+
+    cart.appendChild(card);
+});
+</script>
+
+</body>
+</html>

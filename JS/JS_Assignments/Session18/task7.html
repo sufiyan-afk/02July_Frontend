@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 7</title>
+</head>
+<body>
+
+<script>
+function placeOrder() {
+    confirmOrder();
+}
+
+function confirmOrder() {
+    processPayment();
+}
+
+function processPayment() {
+    throw new Error("Payment failed");
+}
+
+placeOrder();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 4</title>
+</head>
+<body>
+
+<script>
+function addToCart(productName, quantity) {
+    if (quantity < 0) {
+        console.error("Error: Quantity cannot be negative.");
+    } else if (quantity === 0) {
+        console.warn("Warning: Quantity is zero.");
+    } else {
+        console.log(`${productName} added to cart successfully. Quantity: ${quantity}`);
+    }
+}
+
+addToCart("T-Shirt", 2);
+addToCart("Shoes", 0);
+addToCart("Jeans", -1);
+</script>
+
+</body>
+</html>

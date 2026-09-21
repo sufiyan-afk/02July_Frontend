@@ -1,0 +1,42 @@
+import { useState } from "react";
+
+function Task5() {
+    const [followers, setFollowers] = useState([]);
+
+    function addFollower(name) {
+        if (!name || !name.trim()) {
+            return;
+        }
+
+        setFollowers(currentFollowers => [
+            ...currentFollowers,
+            name.trim()
+        ]);
+    }
+
+    return (
+        <div>
+            <h2>Instagram Followers</h2>
+
+            <button onClick={() => addFollower("Sufiyan")}>
+                Add Sufiyan
+            </button>
+
+            <button onClick={() => addFollower("")}>
+                Try Empty Name
+            </button>
+
+            <button onClick={() => addFollower(null)}>
+                Try Null
+            </button>
+
+            <h3>Followers</h3>
+
+            {followers.map((follower, index) => (
+                <p key={index}>{follower}</p>
+            ))}
+        </div>
+    );
+}
+
+export default Task5;

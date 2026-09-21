@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 4</title>
+</head>
+<body>
+
+<div id="cart">
+    <div class="cart-card">
+        <span>T-Shirt - ₹599</span>
+        <button class="remove-btn">X</button>
+    </div>
+
+    <div class="cart-card">
+        <span>Shoes - ₹1999</span>
+        <button class="remove-btn">X</button>
+    </div>
+
+    <div class="cart-card">
+        <span>Jeans - ₹1299</span>
+        <button class="remove-btn">X</button>
+    </div>
+</div>
+
+<script>
+const cart = document.getElementById("cart");
+
+cart.addEventListener("click", function(event) {
+    if (event.target.classList.contains("remove-btn")) {
+        event.target.parentElement.remove();
+    }
+});
+</script>
+
+</body>
+</html>

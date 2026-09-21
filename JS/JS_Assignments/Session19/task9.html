@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 9 - Edit Restaurant</title>
+</head>
+<body>
+
+<h2>Restaurant Manager</h2>
+
+<form id="restaurantForm">
+    <input type="text" id="name" placeholder="Restaurant Name" required>
+    <input type="text" id="cuisine" placeholder="Cuisine" required>
+    <input type="number" id="rating" placeholder="Rating" min="0" max="5" step="0.1" required>
+
+    <button type="submit" id="submitBtn">Add Restaurant</button>
+</form>
+
+<h3>Restaurants</h3>
+<div id="restaurantList"></div>
+
+<script>
+const restaurants = [];
+let editIndex = -1;
+
+const form = document.getElementById("restaurantForm");
+const restaurantList = document.getElementById("restaurantList");
+const submitBtn = document.getElementById("submitBtn");
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const restaurant = {
+        name: document.getElementById("name").value,
+        cuisine: document.getElementById("cuisine").value,
+        rating: document.getElementById("rating").value
+    };
+
+    if (editIndex === -1) {
+        restaurants.push(restaurant);
+    } else {
+        restaurants[editIndex] = restaurant;
+        editIndex = -1;
+        submitBtn.textContent = "Add Restaurant";
+    }
+
+    displayRestaurants();
+    form.reset();
+});
+
+function displayRestaurants() {
+    restaurantList.innerHTML = "";
+
+    restaurants.forEach(function(restaurant, index) {
+        const div = document.createElement("div");
+
+        div.innerHTML = `
+            <strong>${restaurant.name}</strong><br>
+            Cuisine: ${restaurant.cuisine}<br>
+            Rating: ${restaurant.rating}<br>
+
+            <button onclick="editRestaurant(${index})">Edit</button>
+            <button onclick="deleteRestaurant(${index})">Delete</button>
+
+            <hr>
+        `;
+
+        restaurantList.appendChild(div);
+    });
+}
+
+function editRestaurant(index) {
+    editIndex = index;
+
+    document.getElementById("name").value = restaurants[index].name;
+    document.getElementById("cuisine").value = restaurants[index].cuisine;
+    document.getElementById("rating").value = restaurants[index].rating;
+
+    submitBtn.textContent = "Update Restaurant";
+}
+
+function deleteRestaurant(index) {
+    restaurants.splice(index, 1);
+
+    displayRestaurants();
+}
+</script>
+
+</body>
+</html>

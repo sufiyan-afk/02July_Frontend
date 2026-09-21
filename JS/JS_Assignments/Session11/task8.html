@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 8</title>
+</head>
+<body>
+
+<script>
+function paymentSuccessful() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Payment successful!");
+            resolve();
+        }, 1000);
+    });
+}
+
+paymentSuccessful();
+</script>
+
+</body>
+</html>

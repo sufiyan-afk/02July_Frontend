@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 5</title>
+</head>
+<body>
+
+<p>Open Chrome DevTools → Sources and set a breakpoint on the marked line.</p>
+
+<script>
+function addToCart(item, quantity) {
+
+    console.log("Item:", item);
+    console.log("Quantity:", quantity);
+
+    // Set breakpoint on the next line
+    if (quantity === 0) {
+        throw new Error("Quantity cannot be zero");
+    }
+
+    console.log(item + " added to cart.");
+}
+
+addToCart("Shoes", 0);
+</script>
+
+</body>
+</html>

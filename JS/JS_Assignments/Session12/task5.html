@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 5</title>
+</head>
+<body>
+
+<script>
+fetch("https://jsonplaceholder.typicode.com/users")
+    .then(response => response.json())
+    .then(users => {
+        const emails = users.map(user => user.email);
+
+        alert(emails.join(", "));
+    })
+    .catch(error => {
+        console.log("Error:", error);
+    });
+</script>
+
+</body>
+</html>

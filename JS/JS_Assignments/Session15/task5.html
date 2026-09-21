@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 5</title>
+</head>
+<body>
+
+<script>
+class FlipkartProduct {
+    constructor(title, price, rating) {
+        this.title = title;
+        this.price = price;
+        this.rating = rating;
+    }
+
+    displayDetails() {
+        console.log(
+            `${this.title} - ₹${this.price} - ${this.rating}⭐`
+        );
+    }
+}
+
+const product = new FlipkartProduct(
+    "Redmi Note 12 Pro",
+    18999,
+    4.5
+);
+
+product.displayDetails();
+</script>
+
+</body>
+</html>

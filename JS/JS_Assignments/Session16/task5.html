@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 5</title>
+</head>
+<body>
+
+<script>
+const orders = [
+    { name: "Pizza", clicks: 120 },
+    { name: "Burger", clicks: 250 },
+    { name: "Biryani", clicks: 180 }
+];
+
+const totalClicks = orders.reduce(
+    (total, order) => total + order.clicks,
+    0
+);
+
+console.log("Total Clicks:", totalClicks);
+</script>
+
+</body>
+</html>

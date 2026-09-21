@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 10</title>
+</head>
+<body>
+
+<h2>Wishlist</h2>
+
+<ul id="wishlist"></ul>
+
+<button id="clearWishlist">Clear Wishlist</button>
+
+<script>
+    let products = [
+        {
+            name: "Laptop",
+            price: 50000
+        },
+        {
+            name: "Mobile",
+            price: 20000
+        },
+        {
+            name: "Headphones",
+            price: 2000
+        }
+    ];
+
+    localStorage.setItem("wishlist", JSON.stringify(products));
+
+    function displayWishlist() {
+        let saved = localStorage.getItem("wishlist");
+
+        let list = document.getElementById("wishlist");
+
+        list.innerHTML = "";
+
+        if (saved === null) {
+            return;
+        }
+
+        let wishlist = JSON.parse(saved);
+
+        wishlist.forEach(function(product) {
+            let li = document.createElement("li");
+
+            li.innerHTML = product.name + " - ₹" + product.price;
+
+            list.appendChild(li);
+        });
+    }
+
+    document.getElementById("clearWishlist").addEventListener("click", function() {
+        localStorage.removeItem("wishlist");
+
+        displayWishlist();
+    });
+
+    displayWishlist();
+</script>
+
+</body>
+</html>

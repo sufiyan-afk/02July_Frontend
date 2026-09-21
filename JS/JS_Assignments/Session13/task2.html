@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 2</title>
+</head>
+<body>
+
+<script>
+function validateUsername(username) {
+    if (!/^[a-zA-Z0-9]+$/.test(username)) {
+        throw new Error("Invalid Username");
+    }
+
+    return "Valid Username";
+}
+
+try {
+    console.log(validateUsername("Sufiyan123"));
+    console.log(validateUsername("Sufiyan@123"));
+} catch (error) {
+    console.log(error.message);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 6</title>
+</head>
+<body>
+
+<script>
+const posts = [
+    { title: "Post 1", likes: 100 },
+    { title: "Post 2", likes: 250 },
+    { title: "Post 3", likes: 400 }
+];
+
+const totalLikes = posts.reduce(
+    (total, post) => total + post.likes,
+    0
+);
+
+console.log("Total Likes:", totalLikes);
+</script>
+
+</body>
+</html>

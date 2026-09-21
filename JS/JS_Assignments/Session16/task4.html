@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 4</title>
+</head>
+<body>
+
+<script>
+const products = [
+    { name: "T-Shirt", price: 599 },
+    { name: "Jeans", price: 1299 },
+    { name: "Shoes", price: 2499 }
+];
+
+const formattedProducts = products.map(product =>
+    `Product: ${product.name}, Price: ₹${product.price}`
+);
+
+console.log(formattedProducts);
+</script>
+
+</body>
+</html>

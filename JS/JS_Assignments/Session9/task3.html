@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 3</title>
+</head>
+<body>
+
+<script>
+    function getChannelNames(jsonString) {
+        let channels = JSON.parse(jsonString);
+
+        return channels.map(channel => channel.name);
+    }
+
+    let data = '[{"name":"MrBeast"},{"name":"CarryMinati"},{"name":"Technical Guruji"}]';
+
+    console.log(getChannelNames(data));
+</script>
+
+</body>
+</html>

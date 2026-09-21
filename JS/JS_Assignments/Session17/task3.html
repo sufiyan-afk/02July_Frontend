@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 3</title>
+</head>
+<body>
+
+<button id="addProduct">Add Product</button>
+
+<div id="wishlist">
+    <div class="product-card">
+        <span>iPhone 15 - ₹70000</span>
+        <button class="remove-btn">Remove</button>
+    </div>
+
+    <div class="product-card">
+        <span>Samsung Galaxy - ₹50000</span>
+        <button class="remove-btn">Remove</button>
+    </div>
+</div>
+
+<script>
+const wishlist = document.getElementById("wishlist");
+const addProduct = document.getElementById("addProduct");
+
+wishlist.addEventListener("click", function(event) {
+    if (event.target.classList.contains("remove-btn")) {
+        event.target.parentElement.remove();
+    }
+});
+
+addProduct.addEventListener("click", function() {
+    const card = document.createElement("div");
+
+    card.className = "product-card";
+    card.innerHTML = `
+        <span>New Product - ₹999</span>
+        <button class="remove-btn">Remove</button>
+    `;
+
+    wishlist.appendChild(card);
+});
+</script>
+
+</body>
+</html>

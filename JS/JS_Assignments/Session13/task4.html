@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 4</title>
+</head>
+<body>
+
+<script>
+function checkPlaylistURL(url) {
+    if (!url.startsWith("https://open.spotify.com/")) {
+        throw new Error("Invalid Spotify URL");
+    }
+
+    return "Valid Spotify URL";
+}
+
+try {
+    console.log(checkPlaylistURL("https://google.com"));
+} catch (error) {
+    console.log(error.message);
+} finally {
+    console.log("Validation complete");
+}
+</script>
+
+</body>
+</html>
